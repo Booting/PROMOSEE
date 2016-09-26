@@ -1,0 +1,22 @@
+int attr animate_changes 0x7f010000
+int attr default_image 0x7f010001
+int attr error_image 0x7f010002
+int attr in_animation 0x7f010003
+int attr out_animation 0x7f010004
+int color photo_crop_dim_color 0x7f020000
+int color photo_crop_highlight_color 0x7f020001
+int color solid_black 0x7f020002
+int dimen photo_crop_stroke_width 0x7f030000
+int dimen photo_crop_width 0x7f030001
+int dimen photo_preview_size 0x7f030002
+int string generic_error 0x7f040000
+int string generic_server_down 0x7f040001
+int string no_internet 0x7f040002
+int string no_network_connection_toast 0x7f040003
+int[] styleable AnimateImageView { 0x7f010000, 0x7f010003, 0x7f010004 }
+int styleable AnimateImageView_animate_changes 0
+int styleable AnimateImageView_in_animation 1
+int styleable AnimateImageView_out_animation 2
+int[] styleable NetworkImageView { 0x7f010001, 0x7f010002 }
+int styleable NetworkImageView_default_image 0
+int styleable NetworkImageView_error_image 1

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E6000000"
+    android:animateLayoutChanges="true">
+
+    <!-- BODY -->
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <TextView android:id="@+id/lblNumber"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/custom_gray_circle"
+                android:textSize="15sp"
+                android:textColor="#464646"
+                android:text="2"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView android:id="@+id/lblDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:text="Deskripsi Pesanan :"
+                android:layout_marginTop="40dp"
+                android:gravity="center"/>
+            <TextView android:id="@+id/txtDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:text="Paket Silver Subscribe"
+                android:layout_marginTop="4dp"
+                android:gravity="center"/>
+
+            <TextView android:id="@+id/lblMenyimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:text="Meyimpan hingga :"
+                android:layout_marginTop="30dp"
+                android:gravity="center"/>
+            <TextView android:id="@+id/txtMenyimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:text="25 produk Garansimu"
+                android:layout_marginTop="4dp"
+                android:gravity="center"/>
+
+            <TextView android:id="@+id/lblBerlangganan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:text="Berlangganan :"
+                android:layout_marginTop="30dp"
+                android:gravity="center"/>
+            <TextView android:id="@+id/txtBerlangganan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:text="R 39.000/tahun"
+                android:layout_marginTop="4dp"
+                android:gravity="center"/>
+
+            <TextView android:id="@+id/lblPromo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:text="Field Code ID promo :"
+                android:layout_marginTop="30dp"
+                android:gravity="center"/>
+            <ImageView android:id="@+id/imgBarcode"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:background="@drawable/barcode_ex"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+            <RelativeLayout android:id="@+id/relProductBarcode"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:clickable="true"
+                android:animateLayoutChanges="true"
+                android:visibility="gone">
+                <EditText android:id="@+id/txtProductBarcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Barcode"
+                    android:background="@null"
+                    android:textColorHint="#fff"
+                    android:textColor="#fff"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+                <ImageView android:id="@+id/imgScan"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/barcode_ex"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerCrop"/>
+            </RelativeLayout>
+
+            <TextView android:id="@+id/btnProses"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="#fff"
+                android:textSize="17sp"
+                android:background="@drawable/custom_button_red"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="Proses Pesanan"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView android:id="@+id/imgClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/close"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"/>
+
+</RelativeLayout>

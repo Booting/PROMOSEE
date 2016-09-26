@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#f9f9f9">
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="135dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:weightSum="2"
+			android:background="@android:color/white">
+			<LinearLayout android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1.4"
+				android:orientation="vertical"
+				android:padding="10dp">
+				<TextView android:id="@+id/lblProductName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@android:color/black"
+					android:textSize="15sp"
+					android:textAllCaps="true"
+					android:text="Lenovo S850"/>
+				<TextView android:id="@+id/lblGaransiName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="#666"
+					android:textSize="13sp"
+					android:text="Garansi Distributor"/>
+
+				<TextView android:id="@+id/lblStatusBarang"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@android:color/black"
+					android:textSize="15sp"
+					android:textAllCaps="true"
+					android:text="Status Barang Pribadi"
+					android:layout_marginTop="10dp"/>
+				<TextView android:id="@+id/txtStatusBarang"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@android:color/black"
+					android:textSize="11sp"
+					android:text="Tidak Aktif"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="4dp"
+					android:background="#b2b2b3"
+					android:layout_marginTop="5dp"/>
+
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:weightSum="2"
+					android:orientation="horizontal"
+					android:layout_marginTop="3dp">
+					<TextView android:id="@+id/txtDaysLeft"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textColor="#bdbdbe"
+						android:textSize="11sp"
+						android:text="4 days left"/>
+					<TextView android:id="@+id/txtExpressOn"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:textColor="#bdbdbe"
+						android:textSize="11sp"
+						android:gravity="right"
+						android:text="Express on 15.07.2017"/>
+				</LinearLayout>
+			</LinearLayout>
+			<ImageView android:id="@+id/imgProduct"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="0.6"
+				android:src="@drawable/logo_big"
+				android:scaleType="centerCrop"/>
+		</LinearLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="135dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp">
+			<ImageView android:id="@+id/imgPurchase"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scaleType="centerCrop"
+				android:src="@drawable/logo_big"/>
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:background="#80e3e3e3"
+				android:layout_alignParentBottom="true">
+				<TextView android:id="@+id/lblProofOfPurchase"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:textColor="@android:color/black"
+					android:textSize="13sp"
+					android:text="Proof of Purchase"
+					android:gravity="center_vertical"
+					android:layout_marginLeft="10dp"/>
+				<ImageView android:id="@+id/imgZoom"
+					android:layout_width="60dp"
+					android:layout_height="match_parent"
+					android:background="#e3e3e3"
+					android:layout_alignParentRight="true"
+					android:src="@drawable/garansimu_icon_44"
+					android:padding="10dp"/>
+			</RelativeLayout>
+		</RelativeLayout>
+
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:weightSum="2"
+			android:background="@android:color/white">
+			<LinearLayout android:id="@+id/linNotes"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="0.8"
+				android:orientation="horizontal">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_31_white"
+					android:padding="12dp"/>
+				<TextView android:id="@+id/lblNotes"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="#464646"
+					android:textSize="15sp"
+					android:text="Notes"
+					android:layout_marginLeft="10dp"/>
+			</LinearLayout>
+
+			<LinearLayout android:id="@+id/linPurchaseDetails"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1.2"
+				android:orientation="horizontal"
+				android:background="#27b6e0">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_53_white"
+					android:padding="12dp"/>
+				<TextView android:id="@+id/lblPurchaseDetails"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="#fff"
+					android:textSize="15sp"
+					android:text="Purchase Details"
+					android:layout_marginLeft="10dp"/>
+			</LinearLayout>
+		</LinearLayout>
+
+		/*** NOTES LAYOUT ***/
+		<RelativeLayout android:id="@+id/linNotesLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:background="#fff2be"
+			android:padding="10dp"
+			android:visibility="gone">
+			<ImageView android:id="@+id/imgEditNotes"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@drawable/garansimu_icon_52"
+				android:layout_alignParentRight="true"
+				android:padding="2dp"/>
+			<EditText android:id="@+id/txtNotes"
+				android:layout_below="@+id/imgEditNotes"
+				android:layout_width="match_parent"
+				android:layout_height="100dp"
+				android:gravity="top|left"
+				android:textColor="#464646"
+				android:textSize="13sp"
+				android:background="@null"
+				android:hint="Input notes"/>
+		</RelativeLayout>
+
+		/*** PURCHASE DETAILS LAYOUT ***/
+		<LinearLayout android:id="@+id/linPDLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:background="@android:color/white"
+			android:orientation="vertical"
+			android:padding="10dp">
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/txtPurchaseDetails"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="#464646"
+					android:textSize="14sp"
+					android:text="Purchase Details"
+					android:layout_centerVertical="true"/>
+				<ImageView android:id="@+id/imgEditPurchase"
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:src="@drawable/garansimu_icon_52"
+					android:layout_alignParentRight="true"
+					android:padding="2dp"/>
+				<Button android:id="@+id/btnSave"
+					android:layout_width="80dp"
+					android:layout_height="40dp"
+					android:text="Save"
+					android:textSize="10sp"
+					android:textAllCaps="false"
+					android:layout_alignParentRight="true"
+					android:visibility="gone"/>
+			</RelativeLayout>
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal"
+				android:background="#f9f9f9"
+				android:layout_marginTop="10dp">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_04_white"
+					android:padding="12dp"/>
+				<TextView android:id="@+id/txtPurchaseDate"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="#464646"
+					android:textSize="16sp"
+					android:text="15 Agustus 2017"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"/>
+				<EditText android:id="@+id/txtPurchaseDateEdit"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="#464646"
+					android:textSize="16sp"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:editable="false"
+					android:singleLine="true"
+					android:visibility="gone"/>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal"
+				android:background="#f9f9f9"
+				android:layout_marginTop="5dp">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_17_white"
+					android:padding="12dp"/>
+				<TextView android:id="@+id/txtPurchasePrice"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="#464646"
+					android:textSize="16sp"
+					android:text="IDR 2.650.000"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"/>
+				<EditText android:id="@+id/txtPurchasePriceEdit"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center_vertical"
+					android:textColor="#464646"
+					android:textSize="16sp"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:singleLine="true"
+					android:inputType="number"
+					android:visibility="gone"/>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal"
+				android:background="#f9f9f9"
+				android:layout_marginTop="5dp">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_05_white"
+					android:padding="12dp"/>
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp">
+					<TextView android:id="@+id/lblModelNumber"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textColor="#464646"
+						android:textSize="12sp"
+						android:text="Model Number"/>
+					<TextView android:id="@+id/txtModelNumber"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:textColor="#464646"
+						android:textSize="16sp"
+						android:text="LENOVO S850"/>
+					<EditText android:id="@+id/txtModelNumberEdit"
+						android:layout_width="match_parent"
+						android:layout_height="35dp"
+						android:gravity="center_vertical"
+						android:textColor="#464646"
+						android:textSize="16sp"
+						android:text="LENOVO S850"
+						android:singleLine="true"
+						android:visibility="gone"/>
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal"
+				android:background="#f9f9f9"
+				android:layout_marginTop="5dp">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_25_white"
+					android:padding="12dp"/>
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp">
+					<TextView android:id="@+id/lblPlaceOfPurchase"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textColor="#464646"
+						android:textSize="12sp"
+						android:text="Place of Purchase"/>
+					<TextView android:id="@+id/txtPlaceOfPurchase"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:textColor="#464646"
+						android:textSize="16sp"
+						android:text="ITC Roxy"/>
+					<EditText android:id="@+id/txtPlaceOfPurchaseEdit"
+						android:layout_width="match_parent"
+						android:layout_height="35dp"
+						android:gravity="center_vertical"
+						android:textColor="#464646"
+						android:textSize="16sp"
+						android:text="ITC Roxy"
+						android:singleLine="true"
+						android:visibility="gone"/>
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal"
+				android:background="#f9f9f9"
+				android:layout_marginTop="5dp">
+				<ImageView android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:background="#464646"
+					android:src="@drawable/garansimu_icon_14_white"
+					android:padding="12dp"/>
+				<LinearLayout android:orientation="vertical"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp">
+					<TextView android:id="@+id/lblSerialNumber"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textColor="#464646"
+						android:textSize="12sp"
+						android:text="Serial Number"/>
+					<TextView android:id="@+id/txtSerialNumber"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="center_vertical"
+						android:textColor="#464646"
+						android:textSize="16sp"
+						android:text="065229027098265"/>
+					<RelativeLayout android:id="@+id/relSerialNumber"
+						android:layout_width="match_parent"
+						android:layout_height="35dp"
+						android:visibility="gone">
+						<EditText android:id="@+id/txtSerialNumberEdit"
+							android:layout_width="match_parent"
+							android:layout_height="35dp"
+							android:gravity="center_vertical"
+							android:textColor="#464646"
+							android:textSize="16sp"
+							android:text="065229027098265"
+							android:editable="false"
+							android:singleLine="true"
+							android:layout_gravity="center_horizontal"/>
+						<ImageView android:layout_width="23dp"
+							android:layout_height="23dp"
+							android:src="@drawable/garansimu_icon_01"
+							android:layout_centerVertical="true"
+							android:layout_alignParentRight="true"
+							android:layout_marginRight="5dp"/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

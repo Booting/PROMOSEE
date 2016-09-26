@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER BAR -->
+    <RelativeLayout android:id="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/header_bar_center" />
+    </RelativeLayout>
+
+    <LinearLayout android:layout_below="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        /*** KODE BARANG ***/
+        <TextView android:id="@+id/lblKodeBarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:text="1. Date"/>
+        <EditText android:id="@+id/txtKodeBarang"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_edittext_gray"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:hint="Isi Jawaban"
+            android:textColorHint="#c2c2c2"
+            android:textColor="#464646"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:editable="false"/>
+
+        /*** EMAIL PRINCIPAL ***/
+        <TextView android:id="@+id/lblEmailPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="15dp"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:text="2. Email Principal"/>
+        <EditText android:id="@+id/txtEmailPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_edittext_gray"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColorHint="#c2c2c2"
+            android:textColor="#464646"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:editable="false"/>
+
+        /*** ISSUE ***/
+        <TextView android:id="@+id/lblIssue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="15dp"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:text="3. Issue"/>
+        <EditText android:id="@+id/txtIssue"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_edittext_gray"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:hint="Alasan Claim"
+            android:textColorHint="#c2c2c2"
+            android:textColor="#464646"
+            android:textSize="14sp"
+            android:singleLine="true"/>
+
+        /*** MASA GARANSI ***/
+        <TextView android:id="@+id/lblMasaGaransi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="15dp"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:text="3. Masa Garansi"
+            android:visibility="gone"/>
+        <EditText android:id="@+id/txtMasaGaransi"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_edittext_gray"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:hint="Alasan Claim"
+            android:textColorHint="#c2c2c2"
+            android:textColor="#464646"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:weightSum="2"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true">
+        <Button android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#d6d6d6"
+            android:textSize="13sp"
+            android:textColor="#464646"
+            android:textAllCaps="true"
+            android:text="Cancel"
+            android:layout_marginRight="5dp"/>
+        <Button android:id="@+id/btnSend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#27b6e0"
+            android:textSize="13sp"
+            android:textColor="#fff"
+            android:textAllCaps="true"
+            android:text="Send"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

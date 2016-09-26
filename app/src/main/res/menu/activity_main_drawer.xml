@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+        <item android:id="@+id/nav_my_product" android:title="My Product"/>
+        <item android:id="@+id/nav_settings" android:title="Settings" />
+        <item android:id="@+id/nav_send_us_feedback" android:title="Send us feedback" />
+        <item android:id="@+id/nav_how_does_it_work" android:title="How does it work" />
+        <item android:id="@+id/nav_rate_us" android:title="Rate Us" />
+        <item android:id="@+id/nav_share" android:title="Share" />
+        <item android:id="@+id/nav_our_brand" android:title="Our Brand" />
+        <item android:id="@+id/nav_register_as_brand_principle" android:title="Register as Brand Principle" />
+        <item android:id="@+id/nav_how_contact_us" android:title="Contact Us" />
+    </group>
+
+</menu>

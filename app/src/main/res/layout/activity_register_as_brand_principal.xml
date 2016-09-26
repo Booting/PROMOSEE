@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#27b6e0">
+
+    <!-- HEADER BAR -->
+    <RelativeLayout android:id="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/header_bar_center" />
+    </RelativeLayout>
+
+    <TextView android:id="@+id/lblDaftarkan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:text="Daftarkan Merk Anda dan\nBergabung Bersama Kami!"
+        android:layout_marginTop="50dp"
+        android:gravity="center"/>
+
+    <!-- BODY -->
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFF"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp">
+
+            <EditText android:id="@+id/txtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#464646"
+                android:hint="Full Name"
+                android:textColorHint="#464646"
+                android:background="@null"
+                android:singleLine="true"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c1c1" />
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+                <RelativeLayout android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_marginRight="15dp">
+                    <Spinner android:id="@+id/spinPhoneCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"/>
+                    <ImageView android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:src="@drawable/triangle"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+                <EditText android:id="@+id/txtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="13sp"
+                    android:text=""
+                    android:inputType="phone"
+                    android:textColor="#464646"
+                    android:hint="Phone"
+                    android:textColorHint="#464646"
+                    android:background="@null"
+                    android:singleLine="true"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c1c1" />
+
+            <EditText android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#464646"
+                android:hint="Email"
+                android:textColorHint="#464646"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c1c1" />
+
+            <EditText android:id="@+id/txtBrand"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#464646"
+                android:hint="Brand"
+                android:textColorHint="#464646"
+                android:background="@null"
+                android:singleLine="true"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c1c1" />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="-8dp">
+                <Spinner android:id="@+id/spinCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="left"/>
+                <ImageView android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/triangle"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c1c1" />
+
+            <EditText android:id="@+id/txtWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="14dp"
+                android:text=""
+                android:textColor="#464646"
+                android:hint="Website"
+                android:textColorHint="#464646"
+                android:background="@null"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/lblSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_button_gray"
+            android:textColor="#464646"
+            android:textSize="15sp"
+            android:text="Submit"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:clickable="true" />
+        <TextView android:id="@+id/lblDaftarInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:text="Dalam 1x24 jam kami akan segera menghubungi anda"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

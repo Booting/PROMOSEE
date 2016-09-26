@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <!-- HEADER BAR -->
+    <RelativeLayout android:id="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/header_bar_center" />
+    </RelativeLayout>
+
+    <ImageView android:id="@+id/imgHeader"
+        android:layout_below="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_two"/>
+
+    <!-- BODY -->
+    <ScrollView android:layout_below="@+id/imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            /*** PRODUCT BARCODE ***/
+            <RelativeLayout android:id="@+id/relProductBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:clickable="true">
+                <ImageView android:id="@+id/icon05blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_05_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtProductBarcode"
+                    android:layout_toRightOf="@+id/icon05blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Barcode"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+                <ImageView android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/garansimu_icon_01"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** JUMLAH BARANG ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon07blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_07_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtJumlahBarang"
+                    android:layout_toRightOf="@+id/icon07blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Jumlah Barang / Qty"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            /*** PRODUCT SERIAL NUMBER ***/
+            <RelativeLayout android:id="@+id/relProductSerialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:onClick="onProductBarcodeClick">
+                <ImageView android:id="@+id/icon14blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_14_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtProductSerialNumber"
+                    android:layout_toRightOf="@+id/icon14blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Serial Number"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+                <ImageView android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/garansimu_icon_01"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** PRODUCT SERIAL NUMBER 02 ***/
+            <RelativeLayout android:id="@+id/relProductSerialNumberTwo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:onClick="onProductBarcodeClick"
+                android:visibility="gone">
+                <ImageView android:id="@+id/icon14blueTwo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_14_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtProductSerialNumberTwo"
+                    android:layout_toRightOf="@+id/icon14blueTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Serial Number 2"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+                <ImageView android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/garansimu_icon_01"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** PRODUCT SERIAL NUMBER 03 ***/
+            <RelativeLayout android:id="@+id/relProductSerialNumberThree"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:onClick="onProductBarcodeClick"
+                android:visibility="gone">
+                <ImageView android:id="@+id/icon14blueThree"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_14_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtProductSerialNumberThree"
+                    android:layout_toRightOf="@+id/icon14blueThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Serial Number 3"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+                <ImageView android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/garansimu_icon_01"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** PRODUCT SERIAL NUMBER 04 ***/
+            <RelativeLayout android:id="@+id/relProductSerialNumberFour"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:onClick="onProductBarcodeClick"
+                android:visibility="gone">
+                <ImageView android:id="@+id/icon14blueFour"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_14_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtProductSerialNumberFour"
+                    android:layout_toRightOf="@+id/icon14blueFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Serial Number 4"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+                <ImageView android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/garansimu_icon_01"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** PRODUCT SERIAL NUMBER 05 ***/
+            <RelativeLayout android:id="@+id/relProductSerialNumberFive"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:onClick="onProductBarcodeClick"
+                android:visibility="gone">
+                <ImageView android:id="@+id/icon14blueFive"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_14_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtProductSerialNumberFive"
+                    android:layout_toRightOf="@+id/icon14blueFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Product Serial Number 5"
+                    android:background="@null"
+                    android:textColorHint="#464646"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+                <ImageView android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/garansimu_icon_01"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** MERK ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon02blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_02_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtMerk"
+                    android:layout_toRightOf="@+id/icon02blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Isi Merk Produk (e.g Lenovo)"
+                    android:background="@null"
+                    android:textColorHint="#c2c2c2"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            /*** KATEGORI ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon06blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_06_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <Spinner android:id="@+id/spinCategory"
+                    android:layout_toRightOf="@+id/icon06blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"/>
+                <ImageView android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/triangle"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** JENIS PRODUK ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon16blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_16_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtJenisProduk"
+                    android:layout_toRightOf="@+id/icon16blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Isi Jenis Produk (e.g Smartphone)"
+                    android:background="@null"
+                    android:textColorHint="#c2c2c2"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            /*** PERIODE GARANSI ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon03blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_03_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <Spinner android:id="@+id/spinPeriode"
+                    android:layout_toRightOf="@+id/icon03blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"/>
+                <ImageView android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/triangle"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            /*** TANGGAL PEMBELIAN ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon04blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_04_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtTanggalPembelian"
+                    android:layout_toRightOf="@+id/icon04blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:hint="Isi Tanggal Pembelian"
+                    android:background="@null"
+                    android:textColorHint="#c2c2c2"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:editable="false"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            /*** TEMPAT PEMBELIAN ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray">
+                <ImageView android:id="@+id/icon09blue"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_09_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"/>
+                <EditText android:id="@+id/txtTempatPembelian"
+                    android:layout_toRightOf="@+id/icon09blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Isi Tempat Pembelian (e.g Toko Elektronik ABC)"
+                    android:background="@null"
+                    android:textColorHint="#c2c2c2"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            /*** KODE TRANSAKSI ***/
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:visibility="gone">
+                <CheckBox android:id="@+id/chkECommerce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:text="E-commerce"/>
+                <ImageView android:id="@+id/icon09bluee"
+                    android:layout_below="@+id/chkECommerce"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_09_blue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:visibility="invisible"/>
+                <EditText android:id="@+id/txtKodeTransaksi"
+                    android:layout_below="@+id/chkECommerce"
+                    android:layout_toRightOf="@+id/icon09bluee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="Kode Transaksi E-commerce"
+                    android:background="@null"
+                    android:textColorHint="#c2c2c2"
+                    android:textColor="#464646"
+                    android:textSize="14sp"
+                    android:singleLine="true"/>
+            </RelativeLayout>
+
+            /*** HARGA PRODUK ***/
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edittext_gray"
+                    android:layout_weight="1.2">
+                    <ImageView android:id="@+id/icon15blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_15_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <Spinner android:id="@+id/spinCurrency"
+                        android:layout_toRightOf="@+id/icon15blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@null"/>
+                    <ImageView android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/triangle"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/custom_edittext_gray"
+                    android:layout_weight="0.8">
+                    <ImageView android:id="@+id/icon17blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_17_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <EditText android:id="@+id/txtHargaProduk"
+                        android:layout_toRightOf="@+id/icon17blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:hint="Harga Produk"
+                        android:inputType="number"
+                        android:background="@null"
+                        android:textColorHint="#c2c2c2"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:singleLine="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="invisible">
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView android:id="@+id/lblSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="SAVE"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:background="#27b6e0"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

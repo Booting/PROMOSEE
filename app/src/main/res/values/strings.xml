@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PROMOSEE</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- FACEBOOK APP ID
+         Key Hashes [DEV]  : NX406c6W/gTBPzb0eue8MWm9WHo=
+         Key Hashes [LIVE] : mmljfQUkZjiebTVDLPcoEDPTtec=
+    -->
+    <string name="facebook_app_id">466544220204016</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

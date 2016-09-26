@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <!-- HEADER BAR -->
+    <RelativeLayout android:id="@+id/relHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/header_bar_center" />
+    </RelativeLayout>
+
+    <ImageView android:id="@+id/imgHeader"
+        android:layout_below="@+id/relHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_four"/>
+
+    <!-- BODY -->
+    <ScrollView android:layout_below="@+id/imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            /*** PRODUCT IMAGE ***/
+            <RelativeLayout android:id="@+id/relProductImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView android:id="@+id/imgProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"/>
+                <TextView android:id="@+id/lblProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#80000000"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            /*** PRODUCT DETAIL 01 ***/
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+                /** MERK **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon02blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_02_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblMerk"
+                        android:layout_toRightOf="@+id/icon02blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+                /** KATEGORI **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon06blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_06_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblKategori"
+                        android:layout_toRightOf="@+id/icon06blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            /*** PRODUCT DETAIL 02 ***/
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:weightSum="2">
+                /** PERIODE GARANSI **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon03blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_03_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblPeriode"
+                        android:layout_toRightOf="@+id/icon03blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+                /** TANGGAL PEMBELIAN **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon04blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_04_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblTanggalPembelian"
+                        android:layout_toRightOf="@+id/icon04blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            /*** PRODUCT DETAIL 03 ***/
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:weightSum="2">
+                /** JUMLAH BARANG **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon07blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_07_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblJumlahBarang"
+                        android:layout_toRightOf="@+id/icon07blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+                /** TEMPAT PEMBELIAN **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon09blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_09_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblTempatPembelian"
+                        android:layout_toRightOf="@+id/icon09blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            /*** PRODUCT DETAIL 04 ***/
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:weightSum="2">
+                /** CURRENCY **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon15blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_15_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblCurrency"
+                        android:layout_toRightOf="@+id/icon15blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+                /** HARGA PRODUK **/
+                <RelativeLayout android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+                    <ImageView android:id="@+id/icon17blue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/garansimu_icon_17_blue"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblHargaProduk"
+                        android:layout_toRightOf="@+id/icon17blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#464646"
+                        android:textSize="14sp"
+                        android:text="-"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            /*** PRODUCT DETAIL 05 ***/
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="20dp"
+                android:weightSum="2"
+                android:visibility="gone">
+                /** E-COMMERCE **/
+                <CheckBox android:id="@+id/chkECommerce"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="E-commerce" />
+                /** NON E-COMMERCE **/
+                <CheckBox android:id="@+id/chkNonECommerce"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="NON E-commerce" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="14dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="50dp">
+                <CheckBox android:id="@+id/chkSyarat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView android:id="@+id/lblSyarat"
+                    android:layout_toRightOf="@+id/chkSyarat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#27b6e0"
+                    android:layout_marginTop="7dp"
+                    android:text="Do You Agree for these Terms &amp; Conditions"/>
+                <TextView android:id="@+id/lblSyaratDetail"
+                    android:layout_below="@+id/lblSyarat"
+                    android:layout_toRightOf="@+id/chkSyarat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#464646"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut ante eu urna tincidunt semper."/>
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:visibility="invisible">
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:id="@+id/linButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+        <TextView android:id="@+id/lblEdit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="BACK"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:background="#6addff"
+            android:gravity="center"/>
+        <TextView android:id="@+id/lblSave"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SAVE"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:background="#27b6e0"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

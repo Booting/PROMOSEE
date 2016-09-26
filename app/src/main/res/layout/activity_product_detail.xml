@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fitsSystemWindows="true" tools:openDrawer="start">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- HEADER BAR -->
+        <RelativeLayout android:id="@+id/relBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/header_bar_center" />
+        </RelativeLayout>
+
+        <com.viewpagerindicator.UnderlinePageIndicator
+            android:id="@+id/underlinePageIndicator"
+            android:layout_below="@+id/relBottomBar"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="0dp"/>
+        <LinearLayout android:id="@+id/linTrendingRank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/underlinePageIndicator"
+            android:weightSum="2">
+            <Button android:id="@+id/btnWarrantyDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorSelected"
+                android:background="@color/colorBgSelected"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:text="Warranty Details" />
+            <Button android:id="@+id/btnSupport"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorUnselected"
+                android:background="@color/colorBgUnselected"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:text="Support" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linTrendingRank"
+            android:background="#f9f9f9">
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView android:id="@+id/nav_view"
+        android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:layout_gravity="start" android:fitsSystemWindows="true"
+        android:theme="@style/MenuTheme" android:background="#fff"/>
+
+</android.support.v4.widget.DrawerLayout>

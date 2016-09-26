@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <!-- HEADER BAR -->
+    <RelativeLayout android:id="@+id/relHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/header_bar_center" />
+    </RelativeLayout>
+
+    <ImageView android:id="@+id/imgHeader"
+        android:layout_below="@+id/relHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_three"/>
+
+    <!-- BODY -->
+    <ScrollView android:layout_below="@+id/imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+            /*** QUESTION ONE ***
+            <TextView android:id="@+id/lblQuestionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#464646"
+                android:text="Lorem ipsum dolor sit amet?"
+                android:layout_marginTop="20dp"/>
+            <EditText android:id="@+id/txtQuestionOne"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Isi Jawaban"
+                android:textColorHint="#c2c2c2"
+                android:textColor="#464646"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+
+            /*** QUESTION TWO ***
+            <TextView android:id="@+id/lblQuestionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#464646"
+                android:text="Lorem ipsum dolor sit amet?"
+                android:layout_marginTop="20dp"/>
+            <EditText android:id="@+id/txtQuestionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Isi Jawaban"
+                android:textColorHint="#c2c2c2"
+                android:textColor="#464646"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+
+            /*** QUESTION THREE ***
+            <TextView android:id="@+id/lblQuestionThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#464646"
+                android:text="Lorem ipsum dolor sit amet?"
+                android:layout_marginTop="20dp"/>
+            <EditText android:id="@+id/txtQuestionThree"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Isi Jawaban"
+                android:textColorHint="#c2c2c2"
+                android:textColor="#464646"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+
+            /*** QUESTION FOUR ***
+            <TextView android:id="@+id/lblQuestionFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#464646"
+                android:text="Lorem ipsum dolor sit amet?"
+                android:layout_marginTop="20dp"/>
+            <EditText android:id="@+id/txtQuestionFour"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext_gray"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:hint="Isi Jawaban"
+                android:textColorHint="#c2c2c2"
+                android:textColor="#464646"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView android:id="@+id/lblSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="SAVE"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:background="#27b6e0"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

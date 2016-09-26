@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relItem"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/custom_rectangle_shadow">
+
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/dotted_my_product"
+		android:layout_marginBottom="50dp"
+		android:layout_marginRight="7dp">
+		<ImageView android:id="@+id/imgProduct"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"/>
+	</RelativeLayout>
+
+	<ImageView android:id="@+id/imgClose"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:src="@drawable/close"
+		android:padding="4dp"/>
+
+	<TextView android:id="@+id/txtNamaProduct"
+		android:layout_width="match_parent"
+		android:layout_height="35dp"
+		android:layout_marginRight="7dp"
+		android:layout_marginBottom="8dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:singleLine="true"
+		android:textColor="#fff"
+		android:textSize="14sp"
+		android:text="+Product"
+		android:background="@drawable/custom_button_gray_two"
+		android:clickable="true"
+		android:gravity="center"
+		android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#4b9abd">
+        <ImageView android:id="@+id/imgEditLeft"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/border_color"
+            android:layout_alignParentRight="true"
+            android:padding="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <com.garansimu.Utils.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imgProfileLeft"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#1A000000"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="75dp"/>
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="95dp"
+            android:layout_toRightOf="@+id/imgProfileLeft">
+            <TextView android:id="@+id/txtNameLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:text="Roland Given"
+                android:singleLine="true"
+                android:layout_marginRight="24dp"/>
+            <TextView android:id="@+id/txtCountProductLeft"
+                android:layout_below="@+id/txtNameLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#e3e3e3"
+                android:textSize="13sp"
+                android:text="0 Product"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:color/white">
+        /*** HOME ***/
+        <LinearLayout android:id="@+id/linHome"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_25_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblHome"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="Home"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** MY PRODUCT ***/
+        <LinearLayout android:id="@+id/linMyProduct"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_05_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblMyProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="My Product"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** MY PROFILE ***/
+        <LinearLayout android:id="@+id/linMyProfile"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_42_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblMyProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="My Profile"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** UPGRADE TO SUBSCRIBE ***/
+        <LinearLayout android:id="@+id/linUpgradeToSubscribe"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_33_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblUpgradeToSubscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="Upgrade To Subscribe"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** OUR BRAND ***/
+        <LinearLayout android:id="@+id/linOurBrand"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_02_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblOurBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="Our Brand"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** REGISTER AS BRAND PRINCIPLE ***/
+        <LinearLayout android:id="@+id/linRegisterAsPrinciple"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_29_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblRegisterAsPrinciple"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="Register as Brand Principle"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** CONTACT US ***/
+        <LinearLayout android:id="@+id/linContactUs"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_35_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblContactUs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="Contact Us"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        /*** LOG OUT ***/
+        <LinearLayout android:id="@+id/linLogOut"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+            <ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/garansimu_icon_55_blue"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/lblLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#464646"
+                android:textSize="13sp"
+                android:text="Log Out"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

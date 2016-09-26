@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="35dp"
+	android:gravity="center_vertical"
+	android:layout_gravity="center_horizontal"
+	android:background="@color/colorPrimary">
+
+	<ImageView android:id="@+id/imgLeft"
+		android:layout_width="35dp"
+		android:layout_height="35dp"
+		android:padding="10dp"
+		android:src="@drawable/garansimu_icon_08_white"
+		android:layout_marginLeft="2dp"/>
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center">
+		<ImageView android:id="@+id/imgLogo"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:src="@drawable/logogaransee_hori"
+			android:visibility="gone"/>
+		<TextView android:id="@+id/txtTitle"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textSize="15dp"
+			android:text="Log In"
+			android:textAllCaps="true"
+			android:textColor="#fff"/>
+	</LinearLayout>
+
+	<TextView android:id="@+id/txtBack"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:textSize="12dp"
+		android:text="back"
+		android:gravity="center_vertical"
+		android:textColor="#fff"
+		android:layout_marginRight="10dp"
+		android:visibility="gone"/>
+	<ImageView android:id="@+id/imgLogoRight"
+		android:layout_width="30dp"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/icon_left"
+		android:visibility="gone"/>
+
+</RelativeLayout>

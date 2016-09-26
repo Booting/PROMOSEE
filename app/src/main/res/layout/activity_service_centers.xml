@@ -1,0 +1,157 @@
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER BAR -->
+    <RelativeLayout android:id="@+id/relBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/header_bar_center" />
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/relCariProduk"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:background="#004458"
+        android:layout_below="@+id/relBottomBar"
+        android:visibility="gone">
+        <EditText android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Cari Produk"
+            android:background="#fff"
+            android:textSize="13sp"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="35dp"/>
+        <ImageView android:id="@+id/imgSearch"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_below="@+id/relCariProduk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:animateLayoutChanges="true" />
+
+        <RelativeLayout android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="45dp">
+            <TextView android:id="@+id/lblPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:text="ITC Roxy Mas"/>
+
+            <LinearLayout android:id="@+id/linAddress"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblPlaceName"
+                android:layout_marginTop="10dp">
+                <ImageView android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/garansimu_icon_09"
+                    android:layout_marginRight="8dp"/>
+                <TextView android:id="@+id/lblAdress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#000"
+                    android:text="Jalan K. Haji Hasyim Ashari No. 125B, Daerah Khusus Ibukota Jakarta 10150"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/linDayTime"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linAddress"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <ImageView android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/garansimu_icon_34"
+                    android:layout_marginRight="8dp"/>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/lblDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#000"
+                        android:text="Monday - Friday"/>
+                    <TextView android:id="@+id/lblTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#000"
+                        android:text="09.00 - 17.00"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <LinearLayout android:id="@+id/linCall"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#f0f0f0">
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_50"
+                    android:layout_marginRight="8dp"/>
+                <TextView android:id="@+id/lblCallUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"
+                    android:text="Call Us!"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/linDirection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#e8e8e8"
+                android:visibility="gone">
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/garansimu_icon_51"
+                    android:layout_marginRight="8dp"/>
+                <TextView android:id="@+id/lblDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:text="Direction"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
